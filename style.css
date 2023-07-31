@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--VeryDarkBlue);
+    width: 100%;
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 2rem;
+}
+
+.top,
+.bottom {
+    background-color: var(--DarkBlue);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.top {
+    border-top-right-radius: 60px;
+}
+
+.top img.logo {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.top .boxes {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.boxes div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: var(--VeryDarkBlue);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boxes div:hover {
+    background-color: hsla(229, 57%, 11%, 0.5);
+}
+
+.boxes div img {
+    max-width: 100%;
+}
+
+.bottom {
+    padding: 2rem 1.5rem 3rem;
+    position: relative;
+}
+
+.bottom p.main {
+    text-align: center;
+    color: var(--PaleBlue);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.bottom p.main .bold {
+    font-weight: 700;
+}
+
+.bottom p.main .bold:hover {
+    color: white;
+}
+
+.bottom .bar {
+    height: 15px;
+    background-color: hsla(229, 57%, 11%, 0.5);
+    border-radius: 35px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.bar span.color {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 81.5%;
+    height: 11px;
+    background: linear-gradient(45deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 35px;
+}
+
+.bar span.ball {
+    cursor: pointer;
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: white;
+    top: 50%;
+    right: 18.5%;
+    transform: translateY(-50%);
+}
+
+.bottom .storage {
+    color: var(--PaleBlue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.bottom .space {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 180px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2.6rem;
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+}
+
+.space span.gb {
+    margin-left: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--GrayishBlue);
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width:650px) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-size: contain;
+        background-position: bottom 10% left;
+    }
+
+    .container {
+        width: 700px;
+        flex-direction: row;
+        align-items: self-end;
+    }
+
+    .top img.logo {
+        width: 90px;
+    }
+
+    .top {
+        width: 37%;
+    }
+
+    .bottom {
+        padding: 2rem 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 63%;
+        height: 80%;
+    }
+
+    .bottom p.main {
+        text-align: left;
+    }
+
+    .bottom .space {
+        top: -40%;
+        left: 72%;
+    }
+
+    .space span.triangle {
+        position: absolute;
+        width: 30px;
+        height: 40px;
+        border-top: 40px solid white;
+        border-left: 30px solid transparent;
+        bottom: -25px;
+        right: 0px;
+    }
+}
+@media only screen and (min-width:1050px) {
+    body {
+        background-position: bottom -30% left;
+    }
+}
